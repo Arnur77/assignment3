@@ -18,8 +18,10 @@ public class Main {
         passed += testT3();
         passed += testT4();
         passed += testT5();
+        passed += testT6();
+        passed += testT7();
 
-        System.out.println("SUMMARY: " + passed + "/5 PASS");
+        System.out.println("SUMMARY: " + passed + "/7 PASS");
     }
 
     private static int testT1() {
@@ -148,6 +150,43 @@ public class Main {
                             + " | after=" + after
             );
             return 0;
+        }
+        private static int testT6() {
+
+            Shape circle = new Circle(
+                    "C1",
+                    2,
+                    new AsciiRenderer()
+            );
+
+            String actual = circle.execute();
+            String expected = "ASCII circle radius=2";
+
+            return printResult(
+                    "T6",
+                    "Circle + AsciiRenderer",
+                    actual,
+                    expected
+            );
+        }
+
+        private static int testT7() {
+
+            Shape square = new Square(
+                    "S1",
+                    3,
+                    new AsciiRenderer()
+            );
+
+            String actual = square.execute();
+            String expected = "ASCII square side=3";
+
+            return printResult(
+                    "T7",
+                    "Square + AsciiRenderer",
+                    actual,
+                    expected
+            );
         }
     }
 
