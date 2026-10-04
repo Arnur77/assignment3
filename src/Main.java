@@ -151,43 +151,44 @@ public class Main {
             );
             return 0;
         }
-        private static int testT6() {
 
-            Shape circle = new Circle(
-                    "C1",
-                    2,
-                    new AsciiRenderer()
-            );
+    }
+    private static int testT6() {
 
-            String actual = circle.execute();
-            String expected = "ASCII circle radius=2";
+        Shape circle = new Circle(
+                "C1",
+                2,
+                new AsciiRenderer()
+        );
 
-            return printResult(
-                    "T6",
-                    "Circle + AsciiRenderer",
-                    actual,
-                    expected
-            );
-        }
+        String actual = circle.execute();
+        String expected = "ASCII circle radius=2";
 
-        private static int testT7() {
+        return printResult(
+                "T6",
+                "Circle + AsciiRenderer",
+                actual,
+                expected
+        );
+    }
 
-            Shape square = new Square(
-                    "S1",
-                    3,
-                    new AsciiRenderer()
-            );
+    private static int testT7() {
 
-            String actual = square.execute();
-            String expected = "ASCII square side=3";
+        Shape square = new Square(
+                "S1",
+                3,
+                new AsciiRenderer()
+        );
 
-            return printResult(
-                    "T7",
-                    "Square + AsciiRenderer",
-                    actual,
-                    expected
-            );
-        }
+        String actual = square.execute();
+        String expected = "ASCII square side=3";
+
+        return printResult(
+                "T7",
+                "Square + AsciiRenderer",
+                actual,
+                expected
+        );
     }
 
     private static int printResult(
